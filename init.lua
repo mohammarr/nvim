@@ -31,4 +31,14 @@ vim.opt.scrolloff = 10
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "[d", "vim.diagnostic.goto_prev", {desc = 'Go to previous [D]iagnostic message'})
 -- vim.keymap.set("i", "jj", "<Esc>")
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+require("nvim-tree").setup()
+require('gitsigns').setup()
+
 print("Config reloaded!")

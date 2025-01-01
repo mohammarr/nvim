@@ -26,6 +26,7 @@ require("lazy").setup({
   spec = {
 	  { import = "config.plugins" },
 	  { "catppuccin/nvim", name = "catppuccin", priority = 1000, transparent = true },
+	  { "lewis6991/gitsigns.nvim" },
 	  {
       "supermaven-inc/supermaven-nvim",
       config = function()
